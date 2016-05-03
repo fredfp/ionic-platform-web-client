@@ -13,23 +13,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// UMD HEADER START 
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define([], factory);
-    } else if (typeof exports === 'object') {
-        // Node. Does not work with strict CommonJS, but
-        // only CommonJS-like enviroments that support module.exports,
-        // like Node.
-        module.exports = factory();
-    } else {
-        // Browser globals (root is window)
-        root.returnExports = factory();
-  }
-}(this, function () {
-// UMD HEADER END
-
 var XHR = XMLHttpRequest
 if (!XHR) throw new Error('missing XMLHttpRequest')
 request.log = {
@@ -489,10 +472,7 @@ function b64_enc (data) {
 
     return enc;
 }
-    return request;
-//UMD FOOTER START
-}));
-//UMD FOOTER END
+module.exports = request;
 
 },{}],2:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
@@ -1848,9 +1828,6 @@ process.umask = function() { return 0; };
     };
 
     /* global define:true module:true window: true */
-    if (typeof define === 'function' && define['amd']) {
-      define(function() { return lib$es6$promise$umd$$ES6Promise; });
-    }
     if (typeof module !== 'undefined' && module['exports']) {
       module['exports'] = lib$es6$promise$umd$$ES6Promise;
     }

@@ -141,7 +141,7 @@
   "devDependencies": {
     "babel": "^5.8.21",
     "babelify": "^6.2.0",
-    "browser-request": "^0.3.3",
+    "browser-request": "0.3.2",
     "browserify": "^11.0.1",
     "del": "^2.0.2",
     "es6-promise": "git+http://gitlab.pdx.groowin.com/upstream/es6-promise.git#v3.0.2-gw",
