@@ -144,7 +144,7 @@
     "browser-request": "^0.3.3",
     "browserify": "^11.0.1",
     "del": "^2.0.2",
-    "es6-promise": "^3.0.2",
+    "es6-promise": "git+https://github.com/fredfp/es6-promise.git#v3.0.2-fa",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.0",
     "gulp-concat": "^2.2.0",
