@@ -71,7 +71,7 @@ if ((typeof angular === 'object') && angular.module) {
     '$ionicAnalytics',
     'domSerializer',
     function($ionicAutoTrack, $document, $ionicAnalytics, domSerializer) {
-      if (!$ionicAutoTrack.isEnabled('Tap')) {
+      if (!$ionicAutoTrack.isEnabled('TapX')) {
         return;
       }
 
@@ -97,7 +97,7 @@ if ((typeof angular === 'object') && angular.module) {
           eventData.coordinates.y_norm = normY; // eslint-disable-line
         }
 
-        $ionicAnalytics.track('Tap', {
+        $ionicAnalytics.track('TapX', {
           "_ui": eventData
         });
 
@@ -110,12 +110,12 @@ if ((typeof angular === 'object') && angular.module) {
     '$ionicAnalytics',
     '$rootScope',
     function($ionicAutoTrack, $ionicAnalytics, $rootScope) {
-      if (!$ionicAutoTrack.isEnabled('State Change')) {
+      if (!$ionicAutoTrack.isEnabled('State ChangeX')) {
         return;
       }
 
       $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) { // eslint-disable-line
-        $ionicAnalytics.track('State Change', {
+        $ionicAnalytics.track('State ChangeX', {
           "from": fromState.name,
           "to": toState.name
         });
